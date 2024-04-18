@@ -7,11 +7,15 @@
             "src/tests/features/"
         ],
         "require": [
-            "src/tests/steps/*.ts"
+            "src/tests/steps/*.ts",
+            "src/hooks/hooks.ts"
         ],
         "dryRun":false,
         "requireModule": [
             "ts-node/register"
+        ],
+        "format":[
+            "html:cucumber-report.html"
         ]
 
         
