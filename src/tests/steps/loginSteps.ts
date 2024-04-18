@@ -13,9 +13,9 @@ Given('I am on the GitHub login page', async function () {
 });
 
 When('I enter my username and password', async function () {
-    
-    await pageFixture.page.locator('#login_field').fill('WellyShadow')
-    await pageFixture.page.locator('#password').fill('jyU;12&7)r35')
+    await pageFixture.page.locator('#login_field').fill(process.env.GITHUB_USERNAME)
+    await pageFixture.page.locator('#password').fill(process.env.GITHUB_PASSWORD)
+
 });
 
 When('I click the login button', async function () {
@@ -23,5 +23,5 @@ When('I click the login button', async function () {
 }); 
 
 Then('I should be logged in successfully', async function () {
-    await expect(pageFixture.page).toHaveURL('https://github.com/')
+    await expect(pageFixture.page).toHaveURL('https://github.com/sessions/verified-device')
 });
