@@ -13,6 +13,9 @@
         "dryRun":false,
         "requireModule": [
             "ts-node/register"
+        ],
+        "format":[
+            "./src/reports/reporter.js"
         ]
 
         

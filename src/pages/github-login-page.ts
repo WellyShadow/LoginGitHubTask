@@ -4,7 +4,6 @@ const locators = {
   "username_input": "#login_field",
   "password_input": "#password",
   "login_button": '//input[@name="commit"]',
-  
 }
 
 export class GithubLoginPage {

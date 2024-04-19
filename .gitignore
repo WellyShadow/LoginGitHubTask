@@ -5,4 +5,4 @@ node_modules/
 /playwright/.cache/
 allure-results
 src/helper/env/.env.test
-
+allure-report
