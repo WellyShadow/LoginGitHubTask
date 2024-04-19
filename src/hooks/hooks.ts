@@ -6,7 +6,6 @@ import { getEnv } from "../helper/env/env";
 let browser:Browser;
 let context: BrowserContext;
 
-
 BeforeAll(async function(){
     getEnv();
     browser = await chromium.launch({headless:false});
