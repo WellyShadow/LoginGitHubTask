@@ -14,13 +14,20 @@ export class GithubLoginPage {
     await pageFixture.page.goto('https://github.com/login');
   }
 
-  async inputSuccessLoginAndPass(){
+  async inputSuccessLogin(){
     await pageFixture.page.locator(locators.username_input).fill(process.env.GITHUB_USERNAME)
+  }
+
+  async inputSuccessPass(){
     await pageFixture.page.locator(locators.password_input).fill(process.env.GITHUB_PASSWORD)
   }
 
-  async inputFailedLoginAndPass(username, password){
+
+  async inputFailedLogin(username){
     await pageFixture.page.locator(locators.username_input).fill(username)
+  }
+
+  async inputFailedPass(password){
     await pageFixture.page.locator(locators.password_input).fill(password)
   }
 
