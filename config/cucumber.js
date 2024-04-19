@@ -18,6 +18,5 @@ module.exports = {
         format:[
             "./src/reports/allure/reporter.js"
         ],       
-         
     }
 }
