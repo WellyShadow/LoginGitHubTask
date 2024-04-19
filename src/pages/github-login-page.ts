@@ -9,7 +9,6 @@ const locators = {
 
 export class GithubLoginPage {
 
-  
   async goto() {
     await pageFixture.page.goto('https://github.com/login');
   }
@@ -21,7 +20,6 @@ export class GithubLoginPage {
   async inputSuccessPass(){
     await pageFixture.page.locator(locators.password_input).fill(process.env.GITHUB_PASSWORD)
   }
-
 
   async inputFailedLogin(username){
     await pageFixture.page.locator(locators.username_input).fill(username)

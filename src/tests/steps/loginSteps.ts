@@ -1,8 +1,8 @@
-import { Given, When, Then, setDefaultTimeout  } from "@cucumber/cucumber"
-
+import { Given, When, Then } from "@cucumber/cucumber"
+import "../../helper/wait/wait.js";
 import { GithubLoginPage } from "../../pages/github-login-page";
 
-setDefaultTimeout(60 * 1000 * 2)
+
 
 const page = new GithubLoginPage();
 
@@ -17,7 +17,6 @@ When('I enter my username', async function () {
 When('I enter my password', async function () {
     await page.inputSuccessPass()
 });
-
 
 When('I click the login button', async function () {
     await page.submitLogin()
@@ -34,7 +33,6 @@ When('I enter my username as {string}', async function (username) {
 When('I enter my password as {string}', async function (password) {
     await page.inputFailedPass(password)
 });
-
 
 Then('I should get an error', async function () {
     await page.verifyFailedLogin()
