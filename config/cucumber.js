@@ -1,21 +1,21 @@
-{
-    "default": {
-        "tags":"@negative",
-        "formatOptions":{
+module.exports = {
+    default: {
+        tags:process.env.npm_config_TAGS || "",
+        formatOptions:{
             "snippetInterface":"async-await"
         },
-        "paths": [
+        paths: [
             "src/tests/features/"
         ],
-        "require": [
+        require: [
             "src/tests/steps/*.ts",
             "src/hooks/hooks.ts"
         ],
-        "dryRun":false,
-        "requireModule": [
+        dryRun:false,
+        requireModule: [
             "ts-node/register"
         ],
-        "format":[
+        format:[
             "./src/reports/reporter.js"
         ]
 
