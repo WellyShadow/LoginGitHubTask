@@ -16,7 +16,7 @@ module.exports = {
             "ts-node/register"
         ],
         format:[
-            "./src/reports/reporter.js"
+            "./src/reports/allure/reporter.js"
         ],       
          
     }

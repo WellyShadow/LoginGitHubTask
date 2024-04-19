@@ -2,8 +2,6 @@ import { Given, When, Then } from "@cucumber/cucumber"
 import "../../helper/wait/wait.js";
 import { GithubLoginPage } from "../../pages/github-login-page";
 
-
-
 const page = new GithubLoginPage();
 
 Given('I am on the GitHub login page', async function () {
