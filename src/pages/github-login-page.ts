@@ -3,14 +3,14 @@ import { pageFixture } from "../hooks/pageFixture";
 const locators = {
   "username_input": "#login_field",
   "password_input": "#password",
-  "login_button": '//input[@name="commit"]',
-  "error":'js-flash-alert'  
+  "login_button": '#login > div.auth-form-body.mt-3 > form > div > input.btn.btn-primary.btn-block.js-sign-in-button', 
 }
+const baseurl = 'https://github.com/'
 
 export class GithubLoginPage {
 
   async goto() {
-    await pageFixture.page.goto('https://github.com/login');
+    await pageFixture.page.goto(baseurl+'login');
   }
 
   async inputSuccessLogin(){
@@ -34,7 +34,7 @@ export class GithubLoginPage {
   }
 
   async verifySuccessLogin(){
-    await expect(pageFixture.page).toHaveURL('https://github.com/')
+    await expect(pageFixture.page).toHaveURL(baseurl)
   }
 
   async verifyFailedLogin(){

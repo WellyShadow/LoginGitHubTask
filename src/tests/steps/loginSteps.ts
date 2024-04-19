@@ -8,11 +8,8 @@ Given('I am on the GitHub login page', async function () {
     await page.goto()
 });
 
-When('I enter my username', async function () {
+When('I enter my username and password', async function () {
     await page.inputSuccessLogin()
-});
-
-When('I enter my password', async function () {
     await page.inputSuccessPass()
 });
 
@@ -24,11 +21,8 @@ Then('I should be logged in successfully', async function () {
     await page.verifySuccessLogin()
 });
 
-When('I enter my username as {string}', async function (username) {
+When('I enter my credentials as {string} and {string}', async function (username,password) {
     await page.inputFailedLogin(username)
-});
-
-When('I enter my password as {string}', async function (password) {
     await page.inputFailedPass(password)
 });
 
