@@ -1,5 +1,5 @@
 import {Before, After, BeforeAll, AfterAll} from "@cucumber/cucumber";
-import { chromium, Browser, Page, BrowserContext } from "@playwright/test";
+import { chromium, Browser, BrowserContext } from "@playwright/test";
 import { pageFixture } from "./pageFixture";
 import { getEnv } from "../helper/env/env";
 

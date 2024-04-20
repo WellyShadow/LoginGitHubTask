@@ -36,7 +36,7 @@ export class GithubLoginPage {
   async verifySuccessLogin(){
     await expect(pageFixture.page).toHaveURL(baseurl)
   }
-
+  
   async verifyFailedLogin(){
     await expect(pageFixture.page.getByRole('alert')).toBeVisible()
   }
