@@ -3,7 +3,7 @@ import { pageFixture } from "../hooks/pageFixture";
 const locators = {
   "username_input": "#login_field",
   "password_input": "#password",
-  "login_button": '#login > div.auth-form-body.mt-3 > form > div > input.btn.btn-primary.btn-block.js-sign-in-button', 
+  "login_button": '#login .js-sign-in-button', 
 }
 const baseurl = 'https://github.com/'
 
